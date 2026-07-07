@@ -63,6 +63,18 @@ body {
   margin-bottom: 5px;
 }
 
+.titulo-pequeno {
+  font-size: 2rem;
+  color: #8b0000; /* Vermelho Lírio */
+  margin-bottom: 5px;
+}
+
+.titulo-pequeno2 {
+  font-size: 1.7rem;
+  color: #8b0000; /* Vermelho Lírio */
+  margin-bottom: 5px;
+}
+
 .subtitulo {
   font-size: 1.2rem;
   font-style: italic;
