@@ -152,7 +152,7 @@ body {
   cursor: pointer;
   border-radius: 3px;
   transition: background-color 0.3s;
-  margin: 20px 0; /* Espaçamento vertical entre os botões e o conteúdo */
+  margin: 20px 0 50px 0; /* Espaçamento vertical entre os botões e o conteúdo */
 }
 
 .botao:hover {
