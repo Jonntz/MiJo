@@ -1,0 +1,147 @@
+/* Configurações gerais da página */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6dfcc; /* Fundo levemente escuro ao redor do livro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Playfair Display", serif; /* Fonte clássica estilo romance */
+  color: #3e2723; /* Marrom escuro para o texto, imitando tinta antiga */
+}
+
+/* O container principal que simula o livro */
+.livro {
+  background-color: #f4ecd8; /* Cor de papel antigo/creme */
+  width: 90%;
+  max-width: 400px; /* Mantém um tamanho bom no mobile e não fica gigante no PC */
+  height: 85vh;
+  border-radius: 5px 15px 15px 5px; /* Arredondado como as páginas de um livro fechado */
+  box-shadow:
+    10px 10px 30px rgba(0, 0, 0, 0.3),
+    inset -5px 0 10px rgba(0, 0, 0, 0.05); /* Sombra para dar profundidade */
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border-left: 10px solid #8b0000; /* Lombada do livro na cor Vermelho Lírio */
+}
+
+/* Oculta todas as páginas por padrão */
+.pagina {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: fade 0.8s ease-in-out; /* Transição suave de página */
+}
+
+/* Mostra apenas a página que tem a classe 'ativa' */
+.pagina.ativa {
+  display: flex;
+}
+
+/* Animação suave para simular a mudança de foco da página */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilos de Textos */
+.titulo {
+  font-size: 3rem;
+  color: #8b0000; /* Vermelho Lírio */
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #5d4037;
+  margin-top: 0;
+}
+
+.texto-livro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 15px 0;
+}
+
+.instrucao {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Estilos base para Imagens (o design da borda polaroid e rotação mantêm-se aqui) */
+.foto-casal {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover; /* Garante que a foto não fique espremida */
+  border: 5px solid #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg); /* Dá um charme de foto colada à mão */
+  margin: 15px 0;
+}
+
+/* AJUSTES ESPECÍFICOS DE ENQUADRAMENTO */
+
+/* Usado na página 1 para reduzir o zoom MANTENDO o formato */
+.foto-distante {
+  width: 100%; /* Volta a ocupar toda a largura para manter o design */
+  max-height: 320px; /* Aumentamos a altura (antes era 250px) para caber mais da vossa foto! */
+  object-fit: cover;
+  object-position: center 25%; /* Foca nos vossos rostos */
+}
+
+/* Usado nas páginas 2, 3 e 4 para focar nos rostos na medida certa */
+.foto-topo {
+  /* O primeiro valor é o eixo horizontal (centro). O segundo é o vertical. */
+  /* 0% seria o teto, 50% o peito. 25% costuma ser a altura perfeita para os rostos! */
+  object-position: center 25%;
+}
+
+.imagem-decorativa {
+  width: 120px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.imagem-titulo {
+  width: 240px;
+  height: 120px;
+}
+
+/* Botões do Livro */
+.controles {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto; /* Empurra os botões para o fundo da página */
+}
+
+.botao {
+  background-color: #8b0000; /* Vermelho Lírio */
+  color: #f4ecd8;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #5c0000; /* Vermelho mais escuro ao tocar */
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiJo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio id="musica-fundo" src="sua_musica.mp3" loop></audio>
+
+    <div class="livro">
+      <div class="pagina ativa" id="pag-0">
+        <img
+          src="./assets/titulo.png"
+          alt="Ilustração de titulo"
+          class="imagem-titulo"
+        />
+
+        <p class="subtitulo">Nosso primeiro capítulo</p>
+
+        <img
+          src="./assets/lirio.png"
+          alt="Ilustração de Lírio Vermelho"
+          class="imagem-decorativa"
+        />
+
+        <p class="instrucao">Ligue o som 🎵</p>
+        <button class="botao" onclick="abrirLivro()">Abrir Livro</button>
+      </div>
+
+      <div class="pagina" id="pag-1">
+        <h2>Como tudo começou...</h2>
+        <img
+          src="./assets/primeira_foto.jpg"
+          alt="Nossa primeira foto"
+          class="foto-casal foto-distante"
+        />
+        <p class="texto-livro">
+          Aqui você pode escrever o primeiro texto romântico. Substitua esta
+          mensagem pelas suas próprias palavras sobre como esse mês foi
+          especial.
+        </p>
+
+        <div class="controles">
+          <button class="botao" onclick="mudarPagina(-1)">Anterior</button>
+          <button class="botao" onclick="mudarPagina(1)">Próxima</button>
+        </div>
+      </div>
+
+      <div class="pagina" id="pag-2">
+        <h2>Nossos Momentos</h2>
+        <img
+          src="./assets/pedido.jpg"
+          alt="Nossa segunda foto"
+          class="foto-casal foto-topo"
+        />
+        <p class="texto-livro">
+          Mais um espaço para você declarar o seu amor. A cada página que passa,
+          nossa história fica ainda mais bonita.
+        </p>
+
+        <div class="controles">
+          <button class="botao" onclick="mudarPagina(-1)">Anterior</button>
+          <button class="botao" onclick="mudarPagina(1)">Próxima</button>
+        </div>
+      </div>
+
+      <div class="pagina" id="pag-3">
+        <h1 class="titulo">Feliz 1 Mês!</h1>
+        <img
+          src="./assets/festa_junina.jpg"
+          alt="Festa Junina"
+          class="foto-casal foto-topo"
+        />
+        <p class="texto-livro">
+          Com amor, para sempre.<br />Que este seja o primeiro de muitos
+          capítulos.
+        </p>
+
+        <div class="controles">
+          <button class="botao" onclick="mudarPagina(-1)">Anterior</button>
+          <button class="botao" onclick="mudarPagina(1)">Próxima</button>
+        </div>
+      </div>
+
+      <div class="pagina" id="pag-4">
+        <h1 class="titulo">Feliz 1 Mês!</h1>
+        <img src="./assets/parque.jpg" alt="Parque" class="foto-casal" />
+        <p class="texto-livro">
+          Com amor, para sempre.<br />Que este seja o primeiro de muitos
+          capítulos.
+        </p>
+
+        <div class="controles">
+          <button class="botao" onclick="mudarPagina(-1)">Anterior</button>
+          <button class="botao" onclick="fecharLivro()">Fechar Livro</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
